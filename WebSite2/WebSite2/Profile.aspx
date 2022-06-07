@@ -12,10 +12,11 @@
     <form id="form1" runat="server">
         <div>
              <p>
-        <input id="Text1" type="text" />
-    </p>
-    <p>
-        <input id="Text2" type="text" />
+      <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+   
+  
+      <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
     </p>
     <p>
          <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>

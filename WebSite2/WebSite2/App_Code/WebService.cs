@@ -22,9 +22,9 @@ public class WebService : System.Web.Services.WebService
     }
 
     [WebMethod]
-    public string HelloWorld()
+    public string HelloWorld(string nombre, string apellido, int rut)
     {
-        return "Hola a todos";
+        return "Sr(a):"+ nombre +" "+apellido+" Rut: " + rut.ToString() ;
     }
 
 }
