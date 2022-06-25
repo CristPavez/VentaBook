@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class _Default : System.Web.UI.Page
 {
+    int num;
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -14,7 +15,8 @@ public partial class _Default : System.Web.UI.Page
 
     protected void btnenviar_Click(object sender, EventArgs e)
     {
-        ServiceReference1.WebServiceSoapClient sumar = new ServiceReference1.WebServiceSoapClient();
- 
+        ServiceReference1.WebServiceSoapClient dolar = new ServiceReference1.WebServiceSoapClient();
+        num = Convert.ToInt32(TextBox3.Text);
+        Label1.Text = dolar.Dolar(num).ToString();
     }
 }

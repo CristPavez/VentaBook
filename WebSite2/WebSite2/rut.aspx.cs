@@ -10,7 +10,8 @@ public partial class _Default : System.Web.UI.Page
     
 
     
-    string rut;
+    int rut;
+    string dv;
     protected void Page_Load(object sender, EventArgs e)
     {
          
@@ -21,10 +22,10 @@ public partial class _Default : System.Web.UI.Page
 
         ServiceReference1.WebServiceSoapClient formulario = new ServiceReference1.WebServiceSoapClient();
  
-        rut = Convert.ToString(TextBox3.Text);
-        Label1.Text = formulario.HelloWorld(rut);
-        string javaScript = "console.log('a')";
-        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "script", javaScript, true);
+        rut = Convert.ToInt32(TextBox3.Text);
+        dv = Convert.ToString(TextBox2.Text);
+        Label1.Text = formulario.Rut(rut,dv).ToString();
+
 
     }
 }
